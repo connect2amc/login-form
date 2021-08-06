@@ -1,0 +1,378 @@
+body {
+  margin                 : 0;
+  padding                : 0;
+  font-family            : 'Roboto', sans-serif;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color                  : #333333;
+}
+
+* {
+  transition: all .3s;
+  box-sizing: border-box;
+}
+
+a {
+  color : #286efa;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #0044c6;
+}
+
+.fullpage-wrapper {
+  display   : flex;
+  flex-wrap : wrap;
+  min-height: 100vh;
+}
+
+.fullpage-wrapper .left-part {
+  width          : calc(100% - 700px);
+  align-items    : center;
+  justify-content: center;
+  display        : flex;
+  position       : relative;
+}
+
+.step-showing {
+  display    : flex;
+  align-items: center;
+  position   : absolute;
+  top        : 30px;
+  right      : 30px;
+  font-size  : 18px;
+}
+
+.step-showing h6 {
+  margin   : 0;
+  font-size: 14px;
+  color    : #333;
+}
+
+.step-showing .indicator {
+  display    : flex;
+  align-items: center;
+  position   : relative;
+  margin-left: 10px;
+}
+
+.step-showing .indicator span {
+  display      : inline-block;
+  width        : 4px;
+  height       : 4px;
+  border-radius: 100px;
+  background   : #aaaaaa;
+}
+
+.step-showing .indicator span+span {
+  margin-left: 10px;
+}
+
+.step-showing .indicator span.active {
+  background: #333;
+}
+
+.fullpage-wrapper .left-part .form-content {
+  max-width: 500px;
+}
+
+.fullpage-wrapper .form-content h2 {
+  font-size  : 32px;
+  font-weight: 900;
+  margin     : 0 0 40px 0;
+}
+
+.fullpage-wrapper .form-content p {
+  font-size  : 14px;
+  margin     : 0 0 25px 0;
+  line-height: 24px;
+}
+
+.fullpage-wrapper .form-content p:last-child {
+  margin-bottom: 0;
+}
+
+.fullpage-wrapper .form-content p a {
+  font-weight: 600;
+}
+
+.fullpage-wrapper .form-content>p a {
+  margin: 0 0 0 5px;
+}
+
+.form-wrapper .form-group {
+  margin  : 0 0 20px 0;
+  position: relative;
+}
+
+.form-wrapper .form-group .MuiFormControl-root {
+  width: 100%;
+}
+
+.form-wrapper .form-group .MuiFormControl-root .MuiOutlinedInput-input {
+  color      : #333;
+  font-weight: 400;
+}
+
+.form-wrapper .form-group .MuiFormControl-root fieldset {
+  border-color: #ededed;
+  border-width: 1px;
+}
+
+.form-wrapper .form-group .MuiFormControl-root label {
+  color      : #888888;
+  font-weight: 400;
+}
+
+.form-wrapper .form-group .MuiFormControl-root label.Mui-error {
+  color: #f53c3c;
+}
+
+.form-wrapper .form-group .MuiFormControl-root p.Mui-error {
+  margin     : 15px 0 0 0;
+  line-height: normal;
+  color      : #f53c3c;
+  font-size  : 14px;
+}
+
+.form-wrapper .form-group .MuiOutlinedInput-root.Mui-error fieldset {
+  border-color: #f53c3c;
+}
+
+.form-wrapper .form-group p.input-note {
+  margin     : 15px 0 0 0;
+  line-height: normal;
+  color      : #888888;
+  font-size  : 14px;
+}
+
+.form-wrapper .form-group .form-control {
+  width        : 100%;
+  border-radius: 4px;
+  border       : 1px solid #ededed;
+  box-shadow   : none;
+  color        : #333;
+  font-weight  : 400;
+  font-size    : 16px;
+  padding      : 15px 15px;
+  font-family  : 'Roboto', sans-serif;
+}
+
+select.form-control {
+  background         : url('../src/assets/images/arrow-down-sign-to-navigate.png');
+  background-repeat  : no-repeat;
+  background-position: 100% center;
+  background-color   : #fff !important;
+  -moz-appearance    : none;
+  -moz-appearance    : none;
+  -webkit-appearance : none;
+  appearance         : none;
+}
+
+.form-wrapper .form-group .form-control:focus,
+.form-wrapper .form-group .form-control:focus-visible {
+  box-shadow  : none;
+  border-color: #b9caea;
+  outline     : 0;
+}
+
+.view-password {
+  position: absolute;
+  right   : 15px;
+  top     : 16px;
+  color   : #333;
+  cursor  : pointer;
+}
+
+.form-wrapper .form-group label {
+  position   : absolute;
+  top        : 15px;
+  left       : 15px;
+  font-size  : 16px;
+  color      : #888888;
+  font-weight: 400;
+  transition : 0.2s;
+  background : #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-wrapper .form-group.label-animate label {
+  transition: 0.2s;
+  top       : -9px;
+  background: #fff;
+  transform : scale(.8);
+  padding   : 0 5px;
+  left      : 6px;
+}
+
+.error-group p {
+  color : #f53c3c;
+  margin: 10px 0 0 0 !important;
+}
+
+.error-group .form-control {
+  border-color: #f53c3c !important;
+}
+
+.error-group.label-animate label {
+  color: #f53c3c;
+}
+
+.form-wrapper .button-group {
+  margin: 40px 0 50px 0;
+}
+
+.form-wrapper .button-group button {
+  width         : 100%;
+  border        : 0;
+  border-radius : 4px;
+  padding       : 10px 15px;
+  line-height   : 30px;
+  font-size     : 18px;
+  font-weight   : 500;
+  font-family   : 'Roboto', sans-serif;
+  letter-spacing: .2px;
+  cursor        : pointer;
+}
+
+.btn-primary {
+  background-color: #286efa;
+  color           : #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0044c6;
+  color           : #fff;
+}
+
+.btn-disabled {
+  background    : #ededed;
+  color         : #aaaaaa;
+  pointer-events: none;
+}
+
+
+.fullpage-wrapper .right-part {
+  width     : 100%;
+  max-width : 700px;
+  background: #286efa;
+  color     : #fff;
+}
+
+.fullpage-wrapper .right-part .text-content-wrapper {
+  display        : flex;
+  height         : 100%;
+  align-items    : center;
+  justify-content: center;
+  max-width      : 340px;
+  margin         : 0 auto;
+}
+
+.fullpage-wrapper .text-content h1 {
+  font-size  : 32px;
+  font-weight: 900;
+  text-align : center;
+  margin     : 0 0 50px 0;
+}
+
+.fullpage-wrapper .text-content p {
+  font-size     : 18px;
+  margin        : 0;
+  line-height   : 30px;
+  font-weight   : 300;
+  letter-spacing: 1px;
+}
+
+@media(max-width:1366px) {
+  .fullpage-wrapper .left-part {
+    width: calc(100% - 450px);
+  }
+
+  .fullpage-wrapper .right-part {
+    max-width: 450px;
+  }
+
+  .fullpage-wrapper .left-part .form-content {
+    max-width: 400px;
+  }
+}
+
+@media(max-width:980px) {
+  .fullpage-wrapper {
+    align-items: flex-start;
+  }
+
+  .fullpage-wrapper .right-part {
+    order     : 1;
+    max-width : 100%;
+    min-height: 280px;
+  }
+
+  .fullpage-wrapper .left-part {
+    width        : 100%;
+    order        : 2;
+    margin-top   : -100px;
+    margin-bottom: 50px;
+  }
+
+  .fullpage-wrapper .right-part .text-content-wrapper {
+    height       : auto;
+    padding      : 50px 0 150px;
+    padding-left : 24px;
+    padding-right: 24px;
+  }
+
+  .fullpage-wrapper .text-content h1 {
+    margin: 0 0 30px 0;
+  }
+
+  .fullpage-wrapper .left-part .form-content {
+    max-width    : 75%;
+    box-shadow   : 0 0 40px 0 rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    padding      : 50px;
+    background   : #fff;
+  }
+
+  .step-showing {
+    position       : initial;
+    justify-content: center;
+    margin         : 0 0 30px 0;
+  }
+}
+
+@media(max-width:767px) {
+  .fullpage-wrapper .left-part {
+    padding: 0 24px;
+  }
+
+  .fullpage-wrapper .left-part .form-content {
+    max-width: 100%;
+    padding  : 24px;
+  }
+
+  .fullpage-wrapper .form-content h2 {
+    margin: 0 0 20px 0;
+  }
+
+  .fullpage-wrapper .form-content p {
+    margin: 0 0 15px 0;
+  }
+
+  .form-wrapper .form-group {
+    margin: 0 0 15px 0;
+  }
+
+  .form-wrapper .button-group {
+    margin: 20px 0 30px 0px;
+  }
+
+  .fullpage-wrapper .right-part .text-content-wrapper {
+    padding: 30px 24px 80px;
+  }
+
+  .fullpage-wrapper .left-part {
+    margin-top: -50px;
+  }
+}
